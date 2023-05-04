@@ -24,7 +24,6 @@
         box-sizing: border-box;
         padding: 20px;
       }
-
       label {
         display: flex;
         flex-direction: column;
@@ -91,9 +90,9 @@
     </style>
   </head>
   <body>
-    <div class="container">
+    <main class="container">
       <div class="wrapper">
-        <form>
+        <form aria-label="Image Filters">
           <label>
             <span>Hue Rotate</span>
             <input id="hue" type="range" min="0" max="360" value="0" />
@@ -115,10 +114,15 @@
           </label>
         </form>
         <div class="image-container">
-          <img src="./dali.png" width="400" height="400" />
+          <img
+            src="./dali.png"
+            alt="a grid of 4 painted portraits of Salvador Dali"
+            width="400"
+            height="400"
+          />
         </div>
       </div>
-    </div>
+    </main>
 
     <script>
       const img = document.querySelector("img");
